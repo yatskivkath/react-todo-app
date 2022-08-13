@@ -1,0 +1,10 @@
+@import './constants/variables.scss';
+
+
+.container {
+  height: 100%;
+  padding: 70px 20rem 50px 20rem;
+
+  font-size: $font-size;
+  font-family: $font-family;
+}

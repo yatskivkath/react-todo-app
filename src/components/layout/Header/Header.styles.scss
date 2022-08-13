@@ -1,0 +1,39 @@
+@import '../../../constants/variables.scss';
+
+.header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    margin: 0;
+
+    text-transform: uppercase;
+    letter-spacing: .375em;
+    font-weight: 700;
+
+    &--dark {
+        color: $header-primary-color--dark;
+    }
+    &--light {
+        color: $header-primary-color--light;
+    }
+}
+
+.header__theme-button {
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header__icon {
+    height: 25px;
+    width: 25px;
+}

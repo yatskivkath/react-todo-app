@@ -1,0 +1,16 @@
+
+@import '../../constants/variables.scss';
+
+.main-view {
+    background-repeat: no-repeat no-repeat;
+    background-size: 100% auto;
+
+    &--dark {
+        background-image: url(../../assets/bg-desktop-dark.jpg);
+        background-color: $background-primary-color--dark;
+    }
+    &--light {
+        background-image: url(../../assets/bg-desktop-light.jpg);
+        background-color: $background-primary-color--light;
+    }
+}
