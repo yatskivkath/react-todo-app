@@ -1,6 +1,6 @@
 import './App.scss'
 
-import MainPage from './views/MainView/MainView';
+import MainPage from './views/Main/MainView';
 
 function App() {
   return (
