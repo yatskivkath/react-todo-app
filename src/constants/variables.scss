@@ -19,8 +19,8 @@ $navigation-primary-color--hover--dark: #E3E4F1;
 $header-primary-color--dark: #FFFFFF;
 
 $checkbox-primary-color--dark: #979797;
-$checkbox-primary-color--active--dark: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
-$checkbox-primary-color--hover--dark: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+$checkbox-primary-color--active--dark: linear-gradient(#55DDFF, #C058F3);
+$checkbox-primary-color--hover--dark: #FFFFFF;
 $checkbox-secondary-color--dark: #FFFFFF;
 
 // Light Theme Colors
@@ -40,7 +40,7 @@ $header-primary-color--light: #FFFFFF;
 
 $checkbox-primary-color--light: #E3E4F1;
 $checkbox-primary-color--active--light: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
-$checkbox-primary-color--hover--light: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+$checkbox-primary-color--hover--light: #494C6B;
 $checkbox-secondary-color--light: #FFFFFF;
 
 

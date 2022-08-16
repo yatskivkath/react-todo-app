@@ -1,0 +1,33 @@
+@import '../../../../constants/variables.scss';
+
+.todo-add__input {
+    height: 60px;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 20px 70px;
+
+    border: none;
+    border-radius: 5px;
+    color: $secondary-color--dark;
+    font-size: $font-size;
+    font-family: $font-family;
+    font-weight: 400;
+
+    &--dark {
+        background-color: $background-secondary-color--dark;
+    }
+    &--light {
+        background-color: $background-secondary-color--light;
+    }
+    &::placeholder {
+        font-size: $font-size;
+        font-family: $font-family;
+        font-weight: 400;
+        transform: translateY(10%);
+        color: $secondary-color--dark;
+    }
+    &:focus {
+        outline: none;
+    }
+    
+}
