@@ -1,5 +1,6 @@
 import './Header.styles.scss';
 import sun from '../../../assets/icon-sun.svg';
+import moon from '../../../assets/icon-moon.svg';
 
 export default function Header(){
     return (

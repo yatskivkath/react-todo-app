@@ -1,8 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import todosReducer from './reducers/todosReducer'
+import { combineReducers  } from '@reduxjs/toolkit'
+import todosReducer from './todos/todosSlice'
+import themeReducer from './theme/themeSlice'
 
-export default configureStore({
-  reducer: {
-    todos: todosReducer,
-  },
+const rootReducer = combineReducers({
+  todos: todosReducer,
+  theme: themeReducer
 })
+
+export default rootReducer

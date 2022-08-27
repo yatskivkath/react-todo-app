@@ -7,13 +7,64 @@ ul {
 }
 
 .todo-list {
-
     border-radius: 5px;
 
-    &--dark {
+    &.--dark {
         background-color: $background-secondary-color--dark;
     }
-    &--light {
+    &.--light {
         background-color: $background-secondary-color--light;
     }
+}
+
+.todo-list__list {
+   
+}
+
+.todo-list__nav--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 25px 15px 15px;
+
+    color: $navigation-primary-color--dark;
+
+    font-size: $font-size--secondary;
+
+    button {
+        background: none;
+        border: none;
+        padding: 0;
+
+        cursor: pointer;
+    }
+}
+
+.todo-list__nav {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-list__button {
+    color: $navigation-primary-color--dark;
+    font-weight: 700;
+
+    &--active {
+        color: $navigation-primary-color--active--dark;
+    }
+
+    &:hover {
+        color: $navigation-primary-color--hover--dark;
+    }
+}
+
+.todo-list__button-clear {
+    color: $navigation-primary-color--dark;
+
+    &:hover {
+        color: $navigation-primary-color--hover--dark;
+    }
+
 }

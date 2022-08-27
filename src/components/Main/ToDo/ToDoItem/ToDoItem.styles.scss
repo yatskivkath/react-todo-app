@@ -17,13 +17,19 @@
     &--light {
         border-bottom: 1px solid $secondary-color--light;
     }
+
+    &:hover {
+        .todo-item__cross {
+            display: block;
+            cursor: pointer;
+        }
+    }
 }
 
 .todo-item__checkbox {
     height: 20px;
     width: 20px;
     margin: 0;
-    position: relative;
 
     border-radius: 50%;
     appearance: none;
@@ -33,10 +39,6 @@
     &--dark {
         border: 1px solid $checkbox-primary-color--dark;
         border-color: $checkbox-primary-color--dark;
-
-        &:hover {
-            border-color: $checkbox-primary-color--hover--dark;
-        }
 
         &.checked{
             background: $checkbox-primary-color--active--dark;
@@ -60,7 +62,61 @@
     
 }
 
+.todo-item__check--container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &:hover {
+        & > .todo-item__checkbox--dark {
+            border-color: $checkbox-primary-color--hover--dark;
+        }
+
+        & > .todo-item__checkbox--light {
+            border-color: $checkbox-primary-color--hover--light;
+        }
+    }
+}
+
+.todo-item__check{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+
+    &--none {
+        display: none;
+    }
+}
+
 
 .todo-item__title {
     margin: 0 0 0 25px;
+
+    &--crossed {
+        text-decoration: line-through;
+    }
+
+    &--crossed.--dark{
+        color: $secondary-color--inactive--dark;
+    }
+    &--crossed.--light{
+        color: $secondary-color--inactive--light;
+    }
+}
+
+.todo-item__cross--container{
+    margin-left: auto;
+}
+
+.todo-item__cross {
+    
+    display: none;
+    cursor: pointer;
 }
