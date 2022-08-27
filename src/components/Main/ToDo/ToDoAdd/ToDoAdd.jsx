@@ -1,18 +1,24 @@
-import './ToDoAdd.styles.scss';
-import { useState} from 'react';
+import { useDispatch } from 'react-redux'
+import { useState} from 'react'
 
-export function ToDoAdd({ addTodo }) {
+import './ToDoAdd.styles.scss'
 
-    const [input, setInput] = useState("");
+export function ToDoAdd() {
+
+    const [input, setInput] = useState("")
+    const dispatch = useDispatch()
 
     function handleChange(event) {
-        setInput(event.target.value);
+        setInput(event.target.value)
     }
 
     function handleSubmit(event) {
         event.preventDefault()
-        addTodo(input);
-        setInput("");
+        dispatch({
+            type: "todos/addTodo",
+            payload: input
+        });
+        setInput("")
     }
 
     return (

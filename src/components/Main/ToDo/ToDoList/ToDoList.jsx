@@ -1,17 +1,14 @@
-import './ToDoList.styles.scss';
+import { useSelector } from 'react-redux'
 
+import './ToDoList.styles.scss';
 import { ToDoItem } from "../ToDoItem/ToDoItem";
 
-export function ToDoList({todos, toggleTodo}) {
-    const handleToggle = (timestamp) => {
-        toggleTodo(timestamp)
-    }
-    
-
+export function ToDoList() {   
+    const todos = useSelector(state => state.todos)
     return (
         <div className='todo-list  --dark'>
             <ul className='todo-list__list'>
-                {todos.map((todo) => <ToDoItem key={todo.timestamp} todo={todo} handleToggle={handleToggle}/>)}
+                {todos.map((todo) => <ToDoItem key={todo.id} todo={todo}/>)}
             </ul>
             <div className="todo-list__nav--container">
                 <span>5 items left</span>

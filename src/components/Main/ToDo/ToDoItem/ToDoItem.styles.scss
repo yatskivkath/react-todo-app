@@ -19,8 +19,10 @@
     }
 
     &:hover {
-        .todo-item__cross {
-            display: block;
+        .todo-item__cross--container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
         }
     }
@@ -113,10 +115,9 @@
 
 .todo-item__cross--container{
     margin-left: auto;
-}
-
-.todo-item__cross {
-    
     display: none;
     cursor: pointer;
+
+    background: none;
+    border: none;
 }

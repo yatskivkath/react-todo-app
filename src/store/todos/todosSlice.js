@@ -34,11 +34,12 @@ export default function todosReducer(state = initialState, action) {
             ]
         }
         case "todos/deleteTodo": {
+            console.log(action)
             return state.filter(todo => todo.id !== action.payload);
         }
         case "todos/toggleTodo" : {
             return state.map(todo => {
-                if(todo.id === action.payload) {
+                if(todo.id === parseInt(action.payload)) {
                     return {
                         ...todo,
                         completed: !todo.completed
