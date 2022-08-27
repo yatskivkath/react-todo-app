@@ -34,7 +34,6 @@ export default function todosReducer(state = initialState, action) {
             ]
         }
         case "todos/deleteTodo": {
-            console.log(action)
             return state.filter(todo => todo.id !== action.payload);
         }
         case "todos/toggleTodo" : {
@@ -46,6 +45,9 @@ export default function todosReducer(state = initialState, action) {
                     }
                 } else return todo
             })
+        }
+        case "todos/deleteCompleted": {
+            return state.filter( todo => !todo.completed)
         }
         default:
             return state

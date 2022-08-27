@@ -24,7 +24,7 @@ export function ToDoItem({todo}) {
     }
     
     return (
-        <li className="todo-item todo-item--dark">
+        <li className="todo-item todo-item--dark" >
             <div className='todo-item__check--container' >
                 <input 
                     type="checkbox" 

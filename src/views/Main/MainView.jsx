@@ -9,7 +9,7 @@ export default function MainPage() {
         <main className='container main-view main-view--dark'>
             <Header />
             <ToDoAdd />
-            <ToDoList/>
+            <ToDoList />
         </main>
     )
 }
