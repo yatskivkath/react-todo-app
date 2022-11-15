@@ -1,9 +1,11 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useState} from 'react'
 
 import './ToDoAdd.styles.scss'
 
 export function ToDoAdd() {
+
+    const theme = useSelector(state => state.theme)
 
     const [input, setInput] = useState("")
     const dispatch = useDispatch()
@@ -27,7 +29,7 @@ export function ToDoAdd() {
                 <input 
                     type="text" 
                     placeholder="Create a new todo…" 
-                    className="todo-add__input todo-add__input--dark"
+                    className={"todo-add__input todo-add__input--" + theme}
                     onChange={handleChange}
                     value={input}
                 />

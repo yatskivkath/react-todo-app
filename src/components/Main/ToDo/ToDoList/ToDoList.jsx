@@ -7,6 +7,8 @@ import { ToDoItem } from "../ToDoItem/ToDoItem";
 
 
 export function ToDoList() {   
+
+    const theme = useSelector(state => state.theme)
     
     const todos = useSelector(state => state.todos)
     const dispatch = useDispatch()
@@ -55,7 +57,7 @@ export function ToDoList() {
     }
 
     return (
-        <div className='todo-list  --dark'>
+        <div className={'todo-list--' + theme}>
             <ul className='todo-list__list'>
                 {todosShown.map((todo) => <ToDoItem key={todo.id} todo={todo}/>)}
             </ul>
